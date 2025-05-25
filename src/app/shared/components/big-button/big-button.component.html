@@ -1,0 +1,7 @@
+<button #btn class="sis-bigbutton" [ngClass]="[
+        btnDisabled ? 'sis-bigbutton--disabled' : '',
+        secondary ? 'sis-bigbutton--secondary' : '',
+        styleClass ? styleClass : '',
+    ]" [disabled]="btnDisabled" (click)="handleClick($event)">
+  <span *ngIf="text">{{ text }}</span>
+</button>

@@ -1,0 +1,62 @@
+@use "../../../../styles/abstract" as utils;
+
+.sis-footer {
+  display: flex;
+  justify-content: center;
+  height: utils.$base-footer-height-mobile;
+  padding: 0;
+  background: utils.$base-tertiary-color;
+
+
+  &__content {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 32px;
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    color: utils.$base-secondary-color;
+    font-family: 'Helvetica';
+    line-height: 1.5rem;
+  }
+
+  &__clickables {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  a {
+    color: utils.$base-secondary-color !important;
+    text-decoration: none;
+
+    :hover, :focus {
+      text-decoration: underline !important;
+    }
+  }
+
+}
+
+@media screen and (min-width: utils.$base-tablet-break) {
+}
+
+@media screen and (min-width: utils.$base-desktop-break) {
+  .sis-footer {
+    height: utils.$base-footer-height-desktop;
+  
+    &__content {
+      flex-direction: row;
+    }
+
+    &__clickables {
+      flex-direction: row;
+    }
+  }
+}
+
+@media screen and (min-width: utils.$base-desktop-xl-break) {
+
+}

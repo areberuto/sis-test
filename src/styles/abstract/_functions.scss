@@ -1,0 +1,12 @@
+@use "sass:math";
+@use 'base';
+
+// Strips the unit from value
+@function stripUnit($value) {
+    @return math.div($value, ($value * 0 + 1));
+}
+
+// Convert px number to rem
+@function rem($px) {
+    @return #{math.div($px, stripUnit(base.$base-font-size))}rem;
+}

@@ -1,0 +1,198 @@
+@use "../styles/abstract" as utils;
+
+.sis-participa {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - utils.$base-social-height-mobile - utils.$base-header-height-mobile - utils.$base-footer-height-mobile);
+  background: utils.$base-secondary-color;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1140px;
+    padding: 40px 16px 96px 16px;
+  }
+
+  &__h1 {
+    margin-bottom: 24px;
+    font-family: 'Druk Bold Italic';
+    font-size: 56px;
+    line-height: 64px;
+    text-align: center;
+    color: utils.$base-tertiary-color;
+  }
+
+  &__paragraph {
+    font-family: 'Helvetica';
+    font-size: 16px;
+    line-height: 24px;
+    color: utils.$base-tertiary-color;
+    margin-bottom: 16px;
+
+    &--highlight {
+      font-family: 'Druk Bold Italic';
+      font-size: 28px;
+      line-height: 32px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__workinggroups {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+
+  &__groups {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background: utils.$base-quaternary-02-color;
+    padding: 16px;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    max-width: 560px;
+    height: 100%;
+    padding: 16px;
+    gap: 16px;
+    border: 2px solid utils.$base-primary-color;
+    font-family: 'Helvetica';
+    font-size: 16px;
+    line-height: 24px;
+    background: utils.$base-secondary-color;
+
+    h2 {
+      color: utils.$base-primary-color;
+      font-family: 'Druk Bold';
+      font-size: 40px;
+      line-height: 48px;
+      text-align: center;
+    }
+  }
+
+  &__conflicts {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding: 16px;
+    background-color: utils.$base-primary-color;
+    color: utils.$base-secondary-color;
+
+    h2 {
+      margin-bottom: 24px;
+      font-family: 'Druk Bold Italic';
+      font-size: 40px;
+      line-height: 48px;
+      text-align: left;
+      color: utils.$base-secondary-color;
+    }
+
+    p {
+      color: utils.$base-secondary-color;
+    }
+  }
+
+  &__action {
+    h2 {
+      margin-bottom: 24px;
+      font-family: 'Druk Bold Italic';
+      font-size: 40px;
+      line-height: 48px;
+      text-align: center;
+      color: utils.$base-tertiary-color;
+    }
+
+    h3 {
+      margin-bottom: 16px;
+      font-family: 'Druk';
+      font-size: 32px;
+      line-height: 36px;
+      text-align: left;
+      color: utils.$base-tertiary-color;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__card {
+    padding: 16px;
+    background-color: utils.$base-quaternary-02-color;
+
+    a {
+      font-weight: bold;
+      color: utils.$base-tertiary-color !important;
+      text-decoration-color: utils.$base-tertiary-color !important;
+    }
+  }
+}
+
+@media screen and (min-width: utils.$base-tablet-break) {
+  .sis-participa {
+    &__conflicts, &__card {
+      padding: 40px 32px;
+    }
+
+    &__groups {
+      flex-direction: row;
+    }
+
+    &__group {
+      max-width: 348px;
+    }
+
+    &__h1 {
+      font-size: 80px;
+      line-height: 88px;
+    }
+
+    &__conflicts, &__action {
+      h2 {
+        font-size: 56px;
+        line-height: 64px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: utils.$base-desktop-break) {
+  .sis-participa {
+    min-height: calc(100vh - utils.$base-social-height-desktop - utils.$base-header-height-desktop - utils.$base-footer-height-desktop);
+  
+    &__groups {
+      padding: 32px 24px;
+    }
+
+    &__group {
+      padding: 24px;
+    }
+
+    &__cards {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__card {
+      flex-basis: 488px;
+      flex-grow: 1;
+    }
+  }
+}
+
+@media screen and (min-width: utils.$base-desktop-xl-break) {
+  .sis-participa {
+    &__content {
+      padding: 40px 0px 96px 0px;
+    }
+  }
+}

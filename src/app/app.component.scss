@@ -1,0 +1,19 @@
+@use "../styles/abstract" as utils;
+
+.sis-app {
+  min-height: calc(100vh - utils.$base-social-height-mobile - utils.$base-header-height-mobile - utils.$base-footer-height-mobile);
+}
+
+@media screen and (min-width: utils.$base-tablet-break) {
+
+}
+
+@media screen and (min-width: utils.$base-desktop-break) {
+  .sis-app {
+    min-height: calc(100vh - utils.$base-social-height-desktop - utils.$base-header-height-desktop - utils.$base-footer-height-desktop);
+  }
+}
+
+@media screen and (min-width: utils.$base-desktop-xl-break) {
+
+}

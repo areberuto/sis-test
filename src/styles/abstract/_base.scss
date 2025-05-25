@@ -1,0 +1,28 @@
+$app-namespace: '';
+$base-font-size: 16px;
+
+// Header, footer
+
+$social-height-mobile: 42px;
+$header-height-mobile: 64px;
+$footer-height-mobile: 176px;
+
+$social-height-desktop: 42px;
+$header-height-desktop: 96px;
+$footer-height-desktop: 96px;
+
+// Breakpoints
+
+$mobile-break: 360px;
+$tablet-break: 768px;
+$desktop-break: 1024px;
+$desktop-xl-break: 1440px;
+
+// Colors
+
+$primary-color: #FF5400;
+$secondary-color: #fdfdfd;
+$secondary-02-color: #f7f7f7;
+$tertiary-color: #212427;
+$quaternary-color: #47777e;
+$quaternary-02-color: #c7e6e6;

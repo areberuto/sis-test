@@ -1,0 +1,127 @@
+@use "../styles/abstract" as utils;
+
+.sis-home {
+  display: flex;
+  justify-content: center;
+  min-height: calc(100vh - utils.$base-social-height-mobile - utils.$base-header-height-mobile - utils.$base-footer-height-mobile);
+  background: utils.$base-secondary-color;
+  // background-color: red !important;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1140px;
+    padding: 40px 16px 96px 16px;
+    // background-color: orange;
+  }
+
+  &__headers {
+    margin-bottom: 24px;
+  }
+
+  &__h1 {
+    margin-bottom: 16px;
+    font-family: 'Druk Bold Italic';
+    font-size: 56px;
+    line-height: 64px;
+    text-align: center;
+    color: utils.$base-primary-color;
+  }
+
+  &__h2 {
+    font-family: 'Druk Bold Italic';
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: utils.$base-tertiary-color;
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  sis-big-button {
+    width: 100%;
+
+    .sis-big-button {
+      height: 560px;
+    }
+  }
+
+  &__video {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    max-height: 360px;
+    min-height: 192px;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: utils.$base-tablet-break) {
+  .sis-home {
+    &__headers {
+      margin-bottom: 40px;
+    }
+
+    &__h1 {
+      font-size: 80px;
+      line-height: 88px;
+    }
+
+    &__h2 {
+      font-size: 56px;
+      line-height: 64px;
+    }
+
+    &__cta {
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    sis-big-button {
+      max-width: 560px;
+    }
+  }
+}
+
+@media screen and (min-width: utils.$base-desktop-break) {
+  .sis-home {
+    min-height: calc(100vh - utils.$base-social-height-desktop - utils.$base-header-height-desktop - utils.$base-footer-height-desktop);
+  }
+
+  sis-big-button {
+    .sis-bigbutton {
+      height: 196px;
+      padding: 64px;
+      font-size: 72px;
+      line-height: 72px;
+    }
+  }
+}
+
+@media screen and (min-width: utils.$base-desktop-xl-break) {
+  .sis-home {
+    &__content {
+      padding: 40px 0px 96px 0px;
+    }
+  }
+}
