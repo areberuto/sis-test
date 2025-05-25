@@ -18,8 +18,8 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "baseHref": "/",
-            "deployUrl": "/sis-dev/",
-            "outputPath": "dist/sis-front",
+            "deployUrl": "/sis-test/",
+            "outputPath": "dist/sis-test",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
